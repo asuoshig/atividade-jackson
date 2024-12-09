@@ -1,11 +1,5 @@
-{ 
-    "database": { 
-        "host": "localhost", 
-        "port": 5432, 
-        "user": "user", 
-        "password": "password", 
-        "database_name": "database_name" 
-        }, 
-        "secret_key": "your_secret_key"
-        
+{
+"api_url": "https://api.teste.com", 
+"timeout": 3000, 
+"retries": 5 
 }
