@@ -1,106 +1,31 @@
-# Gerenciamento e Controle de Versões de um Conjunto de Arquivos Configuráveis
+# Branch: `feature/validar-teste`
 
-## Descrição do Projeto
+## Descrição
 
-O projeto "Gerenciamento e Controle de Versões de um Conjunto de Arquivos Configuráveis" visa proporcionar uma experiência prática no gerenciamento de configurações e controle de versões utilizando Git, além da automação de testes de mudanças nos arquivos configurados com Jenkins.
+A branch `feature/validar-teste` tem como objetivo implementar e validar a automação dos testes de configuração, especificamente no arquivo `test_script.sh`. Esta feature visa garantir que as mudanças feitas no arquivo `config.json` e outros arquivos de configuração sejam corretamente validadas antes de serem integradas à branch principal.
 
-O objetivo é que os alunos criem um pequeno repositório de arquivos configuráveis e utilizem práticas de Gerência de Configuração (GC) para:
-1. Controlar versões dos arquivos usando Git.
-2. Automatizar o monitoramento e teste de mudanças nos arquivos configurados via Jenkins.
-3. Simular um ambiente colaborativo, onde cada membro da equipe trabalha em diferentes "funcionalidades" ou "configurações".
+## Tarefas da Branch
 
-## Objetivos
+As principais tarefas desta branch incluem:
+1. **Alteração e Atualização do Script de Teste**:
+   - Modificar o `test_script.sh` para incluir testes adicionais e validar as configurações do arquivo `config.json`.
+   - Garantir que o script execute corretamente os testes de conexão e outros parâmetros de configuração.
 
-- **Aplicar conceitos básicos de GC e versionamento**: Compreender e utilizar Git para o gerenciamento de versões e práticas de controle de configuração.
-- **Usar Git para gerenciar mudanças e resolver conflitos**: Realizar o versionamento de arquivos e solucionar conflitos de forma colaborativa.
-- **Configurar pipelines simples no Jenkins para monitorar e validar mudanças**: Implementar a automação dos testes das configurações alteradas.
+2. **Validação de Configurações**:
+   - Validar se o arquivo de configuração (`config.json`) contém os parâmetros corretos, como a URL da API, timeout e número de tentativas.
+   - Incluir verificações adicionais para garantir que os valores de configuração atendam às especificações.
 
-## Escopo Simples do Projeto
+3. **Execução de Testes**:
+   - Utilizar o Jenkins para automatizar a execução do script de teste sempre que alterações forem feitas no repositório.
+   - Configurar um pipeline no Jenkins para rodar os testes de forma contínua.
 
-Os alunos trabalharão com três tipos de arquivos configuráveis:
-1. **Arquivo de Configuração Geral (config.json ou .env)**:
-   - Contém parâmetros fictícios, como URLs de API, variáveis de ambiente, etc.
-   - Exemplo de conteúdo:
-     ```json
-     {
-       "api_url": "https://api.exemplo.com",
-       "timeout": 5000,
-       "retries": 3
-     }
-     ```
+4. **Correção de Possíveis Erros**:
+   - Corrigir quaisquer falhas no processo de validação que forem encontradas durante a execução dos testes.
 
-2. **Documento de Requisitos (requisitos.md)**:
-   - Documento fictício descrevendo as especificações do projeto.
-   - Exemplo de conteúdo:
-     ```markdown
-     # Requisitos do Sistema
-     1. Deve suportar múltiplas APIs.
-     2. Configurações devem ser centralizadas em `config.json`.
-     ```
+## Comandos Utilizados
 
-3. **Script de Teste Básico (test_script.sh ou .bat)**:
-   - Um script simples que simula a validação de configurações.
-   - Exemplo de conteúdo:
-     ```bash
-     echo "Testando conexão com a API..."
-     curl https://api.exemplo.com
-     echo "Teste concluído."
-     ```
+Durante o desenvolvimento desta feature, alguns comandos Git podem ser úteis para colaborar e manter o versionamento:
 
-## Etapas do Projeto
-
-### 1. Organização do Repositório Git
-
-- **Criar Repositório**: Configure um repositório com os três arquivos acima.
-- **Divisão de Trabalho**:
-  - Um aluno edita o `config.json` para ajustar as configurações da API.
-  - Outro aluno edita o `requisitos.md` para documentar mudanças.
-  - Um terceiro aluno ajusta o `test_script.sh` para incluir validações adicionais.
-
-#### Uso de Branches
-- Cada mudança deve ser feita em uma branch separada e, depois, mesclada à branch principal.
-- Exemplos de branches:
-  - `feature/atualiza-config`
-  - `feature/documentacao-requisitos`
-  - `feature/valida-teste`
-
-### 2. Controle de Versionamento com Git
-
-#### Comandos Básicos
-- Criação e uso de branches.
-- Commit e merge.
-- Resolução de conflitos simulados durante merges.
-
-#### Atividade
-- Os alunos criam conflitos intencionalmente editando o mesmo parâmetro no `config.json` em branches diferentes e resolvem usando Git.
-
-### 3. Automação com Jenkins
-
-#### Pipeline Simples no Jenkins
-Configure um pipeline que:
-1. Clone o repositório automaticamente.
-2. Execute o `test_script.sh` para validar as configurações.
-3. Notifique o resultado do teste (sucesso ou falha).
-
-#### Jenkinsfile Básico
-```groovy
-pipeline {
-    agent any
-    stages {
-        stage('Clonar Repositório') {
-            steps {
-                git 'https://github.com/exemplo/repo.git'
-            }
-        }
-        stage('Executar Teste') {
-            steps {
-                sh './test_script.sh'
-            }
-        }
-    }
-}
-
-Conclusão
-
-
-Esse projeto proporcionará uma prática significativa no uso de Git para controle de versão e Jenkins para automação de testes. Além disso, os alunos terão uma experiência real em um ambiente colaborativo de desenvolvimento, onde a integração de mudanças e a comunicação entre membros da equipe são fundamentais.
+1. **Criar e mover para a branch**:
+   ```bash
+   git checkout -b feature/validar-teste
