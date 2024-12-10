@@ -15,8 +15,8 @@ body {
 .header {
     text-align: center;
     padding: 20px;
-    background-color: #000; 
-    border-bottom: 5px solid #e60000; /* Linha vermelha */
+    background-color: green; 
+    border-bottom: 5px solid #ffffff; /* Linha vermelha */
 }
 
 .logo {
@@ -26,7 +26,7 @@ body {
 
 h1 {
     font-size: 2.5rem;
-    color: #fff;
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -38,7 +38,7 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    color: #e60000; /* Título em vermelho */
+    color: #48ff00; /* Título em vermelho */
     margin-bottom: 15px;
 }
 
@@ -49,7 +49,7 @@ p {
 }
 
 .btn-sou-corinthians {
-    background-color: #e60000;
+    background-color: #49e600;
     color: #fff;
     border: none;
     padding: 15px 30px;
@@ -61,14 +61,14 @@ p {
 }
 
 .btn-sou-corinthians:hover {
-    background-color: #b30000;
+    background-color: #48ff00;
 }
 
 .footer {
     background-color: #111;
     text-align: center;
     padding: 20px;
-    border-top: 5px solid #e60000;
+    border-top: 5px solid #0c9e20;
 }
 
 .footer p {
