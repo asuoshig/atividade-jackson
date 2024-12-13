@@ -26,3 +26,36 @@ document.getElementById('add-task-btn').addEventListener('click', () => {
         renderTasks();
     }
 });
+
+// Renderizar Tarefas
+function renderTasks() {
+    const taskList = document.getElementById('task-list');
+    taskList.innerHTML = '';
+    tasks.forEach((task, index) => {
+        const taskItem = document.createElement('li');
+        taskItem.textContent = task.titulo;
+        if (task.status === 'concluida') {
+            taskItem.classList.add('completed');
+        }
+
+        // Marcar como Concluída
+        taskItem.addEventListener('click', () => {
+            task.status = task.status === 'concluida' ? 'pendente' : 'concluida';
+            renderTasks();
+        });
+
+        // Deletar Tarefa
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Deletar';
+        deleteButton.addEventListener('click', (e) => {
+            e.stopPropagation(); // não marca o item deletado como concluído
+            tasks.splice(index, 1);
+            renderTasks();
+        });
+
+        taskItem.appendChild(deleteButton);
+        taskList.appendChild(taskItem);
+    });
+}
+
+renderTasks();
