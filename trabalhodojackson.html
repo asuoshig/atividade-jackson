@@ -3,26 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> O maior do centro oeste</title>
-    <link rel="stylesheet" href="trabalhodojackson.css">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Goi%C3%A1s_Esporte_Clube_logo.svg" alt="Logo do Corinthians" class="logo">
-        <h1>Bem-vindo à Página do Verdão !</h1>
-    </header>
-
-    <main class="main-content">
-        <h2>🏆 Orgulho do Povo 🏆</h2>
-        <p> O clube foi fundado em 6 de abril de 1943. Idealizado pelos irmãos Carlos e Lino Barsi, foi na calçada, embaixo de um poste na rua 7 no centro de Goiânia e em frente a residência de Lino Barsi, foi ali que surgiram os primeiros passos de um sonho, chamado Goiás Esporte Clube. Para jogar a primeira partida de sua história, contra o Atlético Goianiense, o time sem recursos, utilizou camisas (verdes com listas horizontais brancas) doadas pelo América Mineiro. Só que os mineiros só puderam dar nove camisas e foi preciso completar com duas inteiras brancas, o primeiro brasão do clube foi bordado e feito a mão pela esposa de Lino Barsi, um dos idealizadores do Goiás Esporte Clube.
-
-            Por mais de 20 anos, o clube permaneceu pequeno. Sem dinheiro e ainda tímido próximo aos grandes do estado, durante as décadas de 1950 e 1960, o Goiás foi chamado jocosamente pelos rivais de "Clube dos 33" – brincadeira de que seria esse o número de torcedores que o clube tinha. Além da fama de impopular, o time também era considerado perdedor: foram anos, em que o único brilho vinha do atacante Tão Segurado, que vestiu a camisa esmeraldina entre 1954 e 1961 e foi o primeiro jogador do time a ser artilheiro do Campeonato Goiano, em 1956.</p>
-        
-        <button class="btn-sou-corinthians">Sou Verdão de coração </button>
-    </main>
-
-    <footer class="footer">
-        <p>© 2024</p>
-    </footer>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <ul id="task-list"></ul>
+        <input type="text" id="task-input" placeholder="Adicionar nova tarefa">
+        <button id="add-task-btn">Adicionar Tarefa</button>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
