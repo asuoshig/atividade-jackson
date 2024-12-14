@@ -1,0 +1,5 @@
+{
+"api_url": "https://api.teste.com", 
+"timeout": 3000, 
+"retries": 5 
+}
